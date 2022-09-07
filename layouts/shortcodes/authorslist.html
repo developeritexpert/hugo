@@ -1,0 +1,9 @@
+<ul class="authorslist">
+  {{ if (.Get "count") }}
+  <li>
+    {{.Get "count"}}
+    
+    <!-- <a href="{{.Get "cta_link"}}" {{if eq (.Get "cta_new_tab") "true" }}target="_blank" rel="noopener"{{end}} class="btn btn-primary px-3 py-3">{{ (.Get "cta_text") | markdownify | emojify }}</a> -->
+  </li>
+  {{ end }}
+</ul>
