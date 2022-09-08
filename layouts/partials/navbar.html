@@ -26,7 +26,7 @@
 
             {{if $show_logo}}
             <div class="d-none d-lg-inline-flex">
-                <a class="navbar-brand" href="{{ " / " | relLangURL }}">
+                <a class="navbar-brand" href="{{.Site.BaseURL}}">
           {{- if $has_logo -}}
             <img src="{{ $logo.RelPermalink }}" alt="{{ site.Title }}"
             {{with site.Params.header.image.width}}width="{{.}}"{{end}}
@@ -41,7 +41,7 @@
       <span><i class="fas fa-bars"></i></span>
       </button> {{ end }} {{if $show_logo}}
             <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-                <a class="navbar-brand" href="{{ " / " | relLangURL }}">
+                <a class="navbar-brand" href="{{.Site.BaseURL}}">
         {{- if $has_logo -}}
           <img src="{{ $logo.RelPermalink }}" alt="{{ site.Title }}"
           {{with site.Params.header.image.width}}width="{{.}}"{{end}}
@@ -61,7 +61,7 @@
                 <ul class="navbar-nav d-md-inline-flex">
                     {{ range site.Menus.main }} {{ if .HasChildren }}
                     <li class="nav-item dropdown">
-                        <a href="../people" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
               {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
               <span class="caret"></span>
             </a>

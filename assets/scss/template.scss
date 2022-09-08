@@ -717,3 +717,93 @@ section#group-members {
         width: 100%;
     }
 }
+
+// // 
+@media screen and (max-width: 991.98px) {
+    .navbar-brand-mobile-wrapper {
+        a.navbar-brand {
+            display: none;
+        }
+    }
+    .page-header {
+        height: 100px;
+    }
+    .navbar {
+        .container-xl {
+            button.navbar-toggler {
+                position: absolute;
+                right: 20px;
+                top: 40px;
+                background: #fff;
+                padding: 5px 8px;
+            }
+        }
+    }
+    .navbar-light {
+        .navbar-brand {
+            padding-bottom: 20px;
+        }
+    }
+    .article-title {
+        a {
+            font-size: 24px;
+        }
+    }
+    p {
+        font-size: 16px;
+    }
+    .media.stream-item {
+        .article-style {
+            font-size: 16px;
+        }
+    }
+    #group-members {
+        .portrait-title {
+            h2 {
+                font-size: 18px;
+                margin: 0 !important;
+                margin-left: 15px !important;
+            }
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px !important;
+            padding: 0 !important;
+            margin: 0;
+        }
+    }
+    section#alumni {
+        p {
+            a {
+                font-size: 18px;
+            }
+        }
+    }
+    section#taught-courses {
+        h3 {
+            a {
+                font-size: 18px;
+            }
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+    section#previous-events {
+        p {
+            font-size: 18px;
+        }
+    }
+    section#bayesian {
+        p {
+            .Apple-style-span {
+                strong {
+                    font-size: 20px;
+                }
+            }
+            a {
+                font-size: 18px;
+            }
+        }
+    }
+}
