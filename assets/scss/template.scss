@@ -807,3 +807,32 @@ section#group-members {
         }
     }
 }
+
+//
+body {
+    margin-top: 0;
+}
+
+.header--fixed {
+    position: relative;
+}
+
+.top-bar {
+    .top-bar-left {
+        padding: 0 15px;
+    }
+}
+
+.article-container.pt-3 {
+    padding-top: 4rem !important;
+}
+
+@media (max-width: 991.98px) {
+    body {
+        margin-top: 0;
+    }
+}
+
+.home-section {
+    padding: 110px 20px 50px 20px !important;
+}
