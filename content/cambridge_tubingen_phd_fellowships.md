@@ -68,4 +68,3 @@ We look forward to receiving your applications.
     <p>Max Planck Institute for Intelligent Systems</p>
     </div>
 </div>
-

@@ -13,6 +13,12 @@ publishDate: '2017-01-01T00:00:00Z'
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
 publication_types: ['3']
+# show_related: true
+# header:
+#   navbar:
+#     enable: true
+# profile: true
+
 
 # Publication name and optional abbreviated publication name.
 publication: ''
@@ -29,7 +35,7 @@ featured: false
 
 links:
   - name: Custom Link
-    url: http://example.org
+    url: 'www.customlink.org'
 url_pdf: http://arxiv.org/pdf/1512.04133v1
 url_code: '#'
 url_dataset: '#'

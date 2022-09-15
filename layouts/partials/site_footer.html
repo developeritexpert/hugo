@@ -48,5 +48,44 @@
         {{ $i18n_published_with = replace $i18n_published_with "{/repo_link}" "</a>" | safeHTML }}
         {{ $i18n_published_with | markdownify | emojify }}
       {{ end }}
+
     </p>
   </footer>
+{{ .Site.BaseURL }}
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script>
+ $(document).ready(function(){
+	function randomNumber(min, max) { 
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	} 
+ var isslect = $('select.pubtype-select');
+  if(isslect.length){
+  $('#container-publications').before('<div class="public_navigation"></div>');
+	$('select.pubtype-select').find('option').each(function() {
+	if( $(this).val() != '*'){
+		var rndm = randomNumber(1, 7);	
+		$('.public_navigation').append('<div class="pubdiv" data-attr="'+$(this).val() +'"><span class="cls_'+rndm+'" style="background-image:url({{ .Site.BaseURL }}static/'+rndm+'.png); display: block; height: 77px; width:77px; background-repeat: no-repeat; " ></span><b>'+$(this).text()+'</b></div>');
+	 }else{
+		$('.public_navigation').append('<div class="pubdiv" data-attr="all"><span class="cls_all" style="background-image:url({{ .Site.BaseURL }}static/all.png); display: block; height: 77px; width:77px; background-repeat: no-repeat;" ></span><b>All</b></div>');
+	 }
+	});
+	$('body').on('click', '.pubdiv', function(){
+			var cls = $(this).attr('data-attr');
+			if(cls == 'all'){
+				$('#container-publications').find('.grid-sizer').show();
+			}else{
+				$('#container-publications').find('.grid-sizer').hide();
+				$('#container-publications').find(cls).show();
+			}
+			
+			$('#container-publications').isotope({
+				itemSelector: '.grid-sizer'
+			});
+		});
+  }
+	
+ });
+  </script>
